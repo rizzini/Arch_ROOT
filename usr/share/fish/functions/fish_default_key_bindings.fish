@@ -71,7 +71,7 @@ function fish_default_key_bindings -d "emacs-like key binds"
     # bind --preset $argv \el downcase-word
     bind --preset $argv \ec capitalize-word
     # One of these is alt+backspace.
-    #bind --preset $argv \e\x7f backward-kill-word
+    bind --preset $argv \e\x7f backward-kill-word
     bind --preset $argv \e\b backward-kill-word
     if not test "$TERM_PROGRAM" = Apple_Terminal
         bind --preset $argv \eb backward-word
