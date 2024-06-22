@@ -1,9 +1,9 @@
 # /dev/sda2
-UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/         	btrfs     	rw,relatime,compress=zstd:3,space_cache=v2,subvolid=268,subvol=/@	0 0
+UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/         	btrfs     	rw,relatime,space_cache=v2,subvolid=268,subvol=/@	0 0
 
 
 # /dev/sda2
-UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/home     	btrfs     	rw,relatime,compress=zstd:3,space_cache=v2,subvolid=257,subvol=/@home	0 0
+UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/home     	btrfs     	rw,relatime,space_cache=v2,subvolid=257,subvol=/@home	0 0
 
 # /dev/sda5 LABEL=HDD
 UUID=69eacc33-4260-4528-b3f5-10000b93e4ad	/mnt/hdd  	ext4      	rw,relatime	0 2
@@ -15,7 +15,7 @@ UUID=5615-7104      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,cod
 UUID=8d2a230e-40f0-4503-b403-74c1a17fad0a	/mnt/backup	btrfs     	rw,relatime,space_cache=v2,subvolid=5,subvol=/	0 0
 
 # /dev/sda2
-UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/mnt/archlinux	btrfs     	rw,relatime,compress=zstd:3,space_cache=v2,subvolid=5,subvol=/	0 0
+UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/mnt/archlinux	btrfs     	rw,relatime,space_cache=v2,subvolid=5,subvol=/	0 0
 
 # /dev/zram0
 /dev/zram0          	none      	swap      	defaults,pri=100	0 0
