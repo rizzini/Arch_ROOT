@@ -8,8 +8,8 @@ UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/home     	btrfs     	rw,relatime,spac
 # /dev/sda5 LABEL=HDD
 UUID=69eacc33-4260-4528-b3f5-10000b93e4ad	/mnt/hdd  	ext4      	rw,relatime	0 2
 
-# /dev/sda1
-UUID=5615-7104      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=D9EC-11E4      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
 
 # /dev/sda4 LABEL=backup
 UUID=8d2a230e-40f0-4503-b403-74c1a17fad0a	/mnt/backup	btrfs     	rw,relatime,space_cache=v2,subvolid=5,subvol=/	0 0
