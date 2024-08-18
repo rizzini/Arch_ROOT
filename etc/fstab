@@ -23,5 +23,3 @@ UUID=69eacc33-4260-4528-b3f5-10000b93e4ad	/mnt/hdd  	ext4      	rw,relatime	0 2
 
 # /dev/zram0
 /dev/zram0          	none      	swap      	defaults,pri=100	0 0
-
-UUID=c14a229b-3560-4c71-92a2-03c82549e37c	/var/cache/pacman/pkg	btrfs     	rw,relatime,space_cache=v2,subvol=/@PKG	0 0
