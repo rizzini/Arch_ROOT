@@ -19,7 +19,7 @@ UUID=8d2a230e-40f0-4503-b403-74c1a17fad0a	/mnt/backup	btrfs     	rw,relatime,spa
 UUID=69eacc33-4260-4528-b3f5-10000b93e4ad	/mnt/hdd  	ext4      	rw,relatime	0 2
 
 # /dev/zram1
-/dev/zram1          	none      	swap      	defaults,pri=100	0 0
+# /dev/zram1          	none      	swap      	defaults,pri=100	0 0
 
 # /dev/zram0
-/dev/zram0          	none      	swap      	defaults,pri=100	0 0
+# /dev/zram0          	none      	swap      	defaults,pri=100	0 0
