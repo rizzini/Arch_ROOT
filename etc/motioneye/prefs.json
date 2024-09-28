@@ -1,0 +1,9 @@
+{
+    "admin": {
+        "fit_frames_vertically": true,
+        "framerate_factor": 0.99,
+        "layout_columns": 4,
+        "layout_rows": 1,
+        "resolution_factor": 1
+    }
+}
