@@ -1,22 +1,27 @@
 #!/bin/bash
-if [[ $EUID -ne 0 ]]; then
-   echo "Este script deve ser execuado como root." 
-   exit 1
-fi
-IFS=$(echo -en "\n\b");
-for i in $(yadm -Y /etc/yadm stun \
-/etc/tmpfiles.d/* \
-/etc/sddm.conf.d/* \
-    --porcelain); do
-    if [ -n "$(echo "$i" | grep '??')" ];then
-        yadm -Y /etc/yadm add "/$(echo "$i" | cut -d '"' -f2 | tr -d '??' | perl -pe 's/^\s+//')";
+if [[ "$(mount | grep '/dev/sda2 on / type btrfs')" == *"subvol=/@)"* ]];then
+    if [[ $EUID -ne 0 ]]; then
+    echo "Este script deve ser execuado como root."
+    exit 1
     fi
-done
-if [ -n "$(yadm -Y /etc/yadm status --porcelain)" ];then
-    yadm -Y /etc/yadm encrypt 2> /dev/null
-    yadm -Y /etc/yadm status --porcelain;
-    echo -e "\nPressione enter para continuar";
-    read;
-    yadm -Y /etc/yadm commit -a -m "backup";
+    IFS=$(echo -en "\n\b");
+    for i in $(yadm -Y /etc/yadm stun \
+    /etc/tmpfiles.d/* \
+    /etc/sddm.conf.d/* \
+        --porcelain); do
+        if [ -n "$(echo "$i" | grep '??')" ];then
+            yadm -Y /etc/yadm add "/$(echo "$i" | cut -d '"' -f2 | tr -d '??' | perl -pe 's/^\s+//')";
+        fi
+    done
+    if [ -n "$(yadm -Y /etc/yadm status --porcelain)" ];then
+        yadm -Y /etc/yadm encrypt 2> /dev/null
+        yadm -Y /etc/yadm status --porcelain;
+        echo -e "\nPressione enter para continuar";
+        read;
+        yadm -Y /etc/yadm commit -a -m "backup";
+    fi
+else
+    echo -e "Você não está no subvolume ROOT. push não realizado";
 fi
+
 
